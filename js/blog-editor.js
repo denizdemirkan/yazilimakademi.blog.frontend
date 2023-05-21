@@ -17,7 +17,7 @@ window.onload = function () {
   //Take Blog as HTML with images as binary 
   var btnSave = document.getElementById('SubmitBtn');
   btnSave.onclick = function () {
-    blogJSON.text = btoa(tinyMCE.activeEditor.getContent());
+    blogJSON.text = btoa(encodeURIComponent(tinyMCE.activeEditor.getContent()));
     blogJSON.title = document.getElementById('blog-title').value;
     blogJSON.description = document.getElementById('blog-description').value;
     //var blogCategory = document.getElementById('blog-category').value;

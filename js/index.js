@@ -35,4 +35,3 @@ async function getMostLikedBlog() {
         console.error(error);
       }
   }
-
